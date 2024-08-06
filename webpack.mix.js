@@ -23,7 +23,13 @@ mix
 
     // Compile SCSS
     .sass('resources/scss/main.scss', 'css/')
-    .options({ processCssUrls: false })
+    .options({ 
+        processCssUrls: false,
+        postCss: [
+            require('tailwindcss'),
+            require('autoprefixer')
+        ]
+    })
 
 
 // Production only

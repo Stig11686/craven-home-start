@@ -1,10 +1,35 @@
-
-<header id="header" class="header">
-
-	<div class="header-inner inner pt-600 pb-600 mobileL:box-flex">
-		{% include "components/logo.njk" %}
-		{% include "components/nav.njk" %}
+<header class="pt-4">
+	<div class="w-full flex">
+		<div class="md:px-32 pb-12">
+			<img src="../../../images/logo/HomeStart_Logo_FullColour_CMYK.jpg" alt="Home Start Logo" class="w-full">
+		</div>
+		<div class="flex flex-col w-full justify-between pt-4">
+			<div class="flex justify-around items-start">
+				<div class="flex flex-col flex-1">
+					<div class="flex flex-col gap-4">
+						<a class="decoration-none text-sm text-homestart-purple font-bold" href="mailto:homestartcravenoffice@gmail.com">homestartcravenoffice@gmail.com</a>
+						<a class="decoration-none text-sm text-homestart-purple font-bold" href="tel:email address">tel no.</a>
+					</div>
+				</div>
+				<div class="flex flex-1">
+					<div class="h-8 w-8">Fbook Logo</div>
+					<div class="h-8 w-8">Insta Logo</div>
+					<div class="h-8 w-8">X logo</div>
+				</div>
+				<div class="flex flex-1 gap-4">
+					<a class="bg-get-help-yellow text-white px-2.5 py-2.5 font-bold" href="/">Get Help</a>
+					<a class="bg-donate-pink text-white px-2.5 py-2.5 font-bold" href="https://www.home-start.org.uk/appeal/power-of-little-moments">Donate</a>
+				</div>
+			</div>
+			<div class="bg-homestart-orange flex text-white font-bold justify-self-end">
+				<ul class="flex list-style-none">
+					{% for item in navigation.main %}
+						<li class="px-4 py-4 ">
+							<a href="{{ item.url }}" class="text-white text-base hover:text-homestart-purple">{{ item.label }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 	</div>
-
 </header>
-

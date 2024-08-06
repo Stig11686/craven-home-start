@@ -1,2 +1,44 @@
 
 //========== Homepage ==========//
+.slider-container {
+    position: relative;
+    .prevArrow {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        font-size: 6rem;
+        color: lightgray;
+    }
+
+    .nextArrow {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        font-size: 6rem;
+        color: lightgray;
+    }
+}
+
+#home-hero-slider {
+    .slide {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center center; 
+        background-repeat: no-repeat;
+        position: relative;
+
+        &:nth-child(1) {
+            background-image: url('../../images/home/homestartuk-westlothian-2984.jpg');
+        }
+        &:nth-child(2) {
+            background-image: url('../../images/home/homestartuk-westlothian-2408.jpg');
+        }
+        &:nth-child(3) {
+            background-image: url('../../images/home/1902-hs-camden-0253.jpg');
+        }
+        &:nth-child(4) {
+            background-image: url('../../images/home/homestartuk-eastlothian-4453.jpg');
+        }
+
+    }
+}

@@ -23,7 +23,9 @@ const $$ = {
 
     mobileNav           : document.getElementById('mobile-nav'),
 
-    mobileNavToggle     : document.getElementById('mobile-nav-toggle')
+    mobileNavToggle     : document.getElementById('mobile-nav-toggle'),
+
+    homeHeroSlider      : document.getElementById('home-hero-slider'),
 
 }
 
