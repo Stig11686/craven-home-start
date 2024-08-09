@@ -56,10 +56,10 @@
     }
 
     .homestart-hero-text-box {
-        bottom: 7rem;
-        right: 6rem;
+        bottom: 0;
+        right: 0;
         max-width: 500px;
-        min-height: 350px;
+        min-height: 300px;
         padding: 50px 50px 10px;
         background-image: url(../../../images/home/slider-text-box2-purple.png);
         background-size: cover;
@@ -71,4 +71,21 @@
         font-size: clamp(16px, 22px, 24px);
         line-height: 1.8;
     }
+
+    @media screen and (min-width: 600px){
+        .homestart-hero-text-box {
+        bottom: 5rem;
+        right: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 820px){
+        .homestart-hero-text-box {
+        bottom: 7rem;
+        right: 6rem;
+        min-height: 350px;
+        }
+    }
+
+    
 }

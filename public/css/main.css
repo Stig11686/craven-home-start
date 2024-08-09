@@ -525,6 +525,12 @@ video {
 .grid{
   display: grid;
 }
+.hidden{
+  display: none;
+}
+.h-16{
+  height: 4rem;
+}
 .h-32{
   height: 8rem;
 }
@@ -551,6 +557,9 @@ video {
 }
 .w-8{
   width: 2rem;
+}
+.w-\[90\%\]{
+  width: 90%;
 }
 .w-full{
   width: 100%;
@@ -753,14 +762,14 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-12{
-  padding-bottom: 3rem;
-}
 .pb-20{
   padding-bottom: 5rem;
 }
 .pb-24{
   padding-bottom: 6rem;
+}
+.pb-4{
+  padding-bottom: 1rem;
 }
 .pb-8{
   padding-bottom: 2rem;
@@ -890,15 +899,15 @@ video {
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.transition-all{
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all{
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1902,8 +1911,6 @@ a:not([class]):hover {
 }
 
 .mobile-nav-toggle {
-  position: fixed;
-  bottom: 0;
   height: 3.05rem;
   align-items: center;
   justify-content: center;
@@ -2133,10 +2140,10 @@ a:not([class]):hover {
   background-image: url("../../images/home/homestartuk-eastlothian-4453.jpg");
 }
 #home-hero-slider .homestart-hero-text-box {
-  bottom: 7rem;
-  right: 6rem;
+  bottom: 0;
+  right: 0;
   max-width: 500px;
-  min-height: 350px;
+  min-height: 300px;
   padding: 50px 50px 10px;
   background-image: url(../../../images/home/slider-text-box2-purple.png);
   background-size: cover;
@@ -2147,6 +2154,19 @@ a:not([class]):hover {
   justify-content: center;
   font-size: 22px;
   line-height: 1.8;
+}
+@media screen and (min-width: 600px) {
+  #home-hero-slider .homestart-hero-text-box {
+    bottom: 5rem;
+    right: 1rem;
+  }
+}
+@media screen and (min-width: 820px) {
+  #home-hero-slider .homestart-hero-text-box {
+    bottom: 7rem;
+    right: 6rem;
+    min-height: 350px;
+  }
 }
 .placeholder\:text-gray-400::-moz-placeholder{
   --tw-text-opacity: 1;
@@ -2239,6 +2259,9 @@ a:not([class]):hover {
   }
 }
 @media (min-width: 768px){
+  .md\:sticky{
+    position: sticky;
+  }
   .md\:order-1{
     order: 1;
   }
@@ -2257,9 +2280,9 @@ a:not([class]):hover {
   .md\:justify-between{
     justify-content: space-between;
   }
-  .md\:px-32{
-    padding-left: 8rem;
-    padding-right: 8rem;
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .md\:pb-8{
     padding-bottom: 2rem;
@@ -2283,6 +2306,12 @@ a:not([class]):hover {
   .lg\:mr-0{
     margin-right: 0px;
   }
+  .lg\:flex{
+    display: flex;
+  }
+  .lg\:h-auto{
+    height: auto;
+  }
   .lg\:w-1\/2{
     width: 50%;
   }
@@ -2304,6 +2333,10 @@ a:not([class]):hover {
   .lg\:justify-between{
     justify-content: space-between;
   }
+  .lg\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
@@ -2316,8 +2349,18 @@ a:not([class]):hover {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .lg\:pb-12{
+    padding-bottom: 3rem;
+  }
   .lg\:pt-32{
     padding-top: 8rem;
+  }
+  .lg\:pt-16{
+    padding-top: 4rem;
   }
 }
 @media (min-width: 1280px){
@@ -2333,8 +2376,15 @@ a:not([class]):hover {
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .xl\:justify-start{
+    justify-content: flex-start;
+  }
   .xl\:gap-8{
     gap: 2rem;
+  }
+  .xl\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   .xl\:px-48{
     padding-left: 12rem;

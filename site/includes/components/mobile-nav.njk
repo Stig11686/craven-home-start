@@ -1,14 +1,13 @@
-<nav id="mobile-nav" class="mobile-nav width-full height-screen box-flex bg-primary pl-700 pr-700 pt-800 z-20 mobileXL:box-hidden" aria-label="Mobile">
+<nav id="mobile-nav" class="mobile-nav height-screen box-flex items-center justify-center bg-homestart-purple w-[90%] pt-800 z-20 mobileXL:box-hidden" aria-label="Mobile">
 
-    {% set navigation = collections.all | eleventyNavigation %}
 
-    <ul class="width-full">
+    <ul class="width-full flex flex-col items-center">
 
-        {%- for item in navigation %}
+        {%- for item in navigation.main %}
 
         <li class="item">
 
-            <a href="{{ item.url | url }}" class="link box-block color-white text-600 {{ 'active' if item.url === page.url }}" {{ 'aria-current=page' if item.url === page.url }}>{{ item.title }}</a>
+            <a href="{{ item.url | url }}" class="link box-block color-white text-600 {{ 'active' if item.url === page.url }}" {{ 'aria-current=page' if item.url === page.url }}>{{ item.label }}</a>
 
         </li>
 
