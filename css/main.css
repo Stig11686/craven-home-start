@@ -448,6 +448,12 @@ video {
 .static{
   position: static;
 }
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
 .z-20{
   z-index: 20;
 }
@@ -1649,6 +1655,27 @@ a:not([class]):hover {
     justify-content: space-between;
   }
 }
+#social_links a::before {
+  display: block;
+  font-size: 1.2rem;
+  font-family: fontawesome;
+  font-weight: 400;
+  transition: color ease 0.1s;
+  color: #500778;
+}
+#social_links a:hover::before {
+  color: #e35205;
+}
+#social_links .facebook::before {
+  content: "\f09a";
+}
+#social_links .twitter::before {
+  content: "\e61b";
+}
+#social_links .instagram::before {
+  content: "\f16d";
+}
+
 .nav .link {
   height: 3.05rem;
   line-height: 3.05rem;
@@ -1866,18 +1893,27 @@ a:not([class]):hover {
   position: relative;
 }
 .slider-container .prevArrow {
-  position: absolute;
   top: 50%;
   left: 20px;
-  font-size: 6rem;
-  color: lightgray;
+}
+.slider-container .prevArrow::before {
+  content: "<";
+  display: block;
 }
 .slider-container .nextArrow {
-  position: absolute;
   top: 50%;
   right: 20px;
-  font-size: 6rem;
+}
+.slider-container .nextArrow::before {
+  content: ">";
+  display: block;
+}
+.slider-container .nextArrow,
+.slider-container .prevArrow {
+  cursor: pointer;
+  font-size: 2rem;
   color: lightgray;
+  position: absolute;
 }
 
 #home-hero-slider .slide {
@@ -1898,6 +1934,22 @@ a:not([class]):hover {
 }
 #home-hero-slider .slide:nth-child(4) {
   background-image: url("../../images/home/homestartuk-eastlothian-4453.jpg");
+}
+#home-hero-slider .homestart-hero-text-box {
+  bottom: 7rem;
+  right: 6rem;
+  max-width: 500px;
+  min-height: 350px;
+  padding: 50px 50px 10px;
+  background-image: url(../../../images/home/slider-text-box2-purple.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1.8;
 }
 .placeholder\:text-gray-400::-moz-placeholder{
   --tw-text-opacity: 1;

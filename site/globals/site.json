@@ -1,19 +1,20 @@
 {
-    "name": "Skeleventy",
+    "name": "Home Start Craven",
     "url": "https://skeleventy.netlify.app",
     "author": {
-        "name": "Mill Burray",
-        "handle": "@joe_dyer1"
+        "name": "Steve Marks",
+        "handle": ""
     },
     "images": {
-        "favicon": "/favicon.png",
-        "favicon_svg": "/favicon.svg",
+        "favicon": "/cropped-HSL-flavicon-32x32.png",
+        "favicon_svg": "/cropped-HSL-flavicon-32x32.png",
         "apple_touch_icon": "/images/meta/apple-touch-icon.png",
-        "twitter": "/images/meta/twitter.jpg",
-        "og": "/images/meta/og.jpg"
+        "twitter": "",
+        "og": ""
     },
     "social_links": {
-        "github": "https://github.com/josephdyer/skeleventy",
-        "twitter": "https://twitter.com/joe_dyer1"
+        "instagram": "https://www.instagram.com/homestartcraven/",
+        "twitter": "https://twitter.com/HomeCraven",
+        "facebook": "https://www.facebook.com/Home-Start-Craven-602282666558168/"
     }
 }

@@ -3,19 +3,30 @@
 .slider-container {
     position: relative;
     .prevArrow {
-        position: absolute;
         top: 50%;
         left: 20px;
-        font-size: 6rem;
-        color: lightgray;
+        &::before{
+            content:'<';
+            display: block;
+        }
     }
+    
 
     .nextArrow {
-        position: absolute;
         top: 50%;
         right: 20px;
-        font-size: 6rem;
+        &::before{
+            content:'>';
+            display: block;
+        }
+    }
+
+    .nextArrow,
+    .prevArrow {
+        cursor: pointer;
+        font-size: 2rem;
         color: lightgray;
+        position: absolute;
     }
 }
 
@@ -40,5 +51,24 @@
             background-image: url('../../images/home/homestartuk-eastlothian-4453.jpg');
         }
 
+   
+
+    }
+
+    .homestart-hero-text-box {
+        bottom: 7rem;
+        right: 6rem;
+        max-width: 500px;
+        min-height: 350px;
+        padding: 50px 50px 10px;
+        background-image: url(../../../images/home/slider-text-box2-purple.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(16px, 22px, 24px);
+        line-height: 1.8;
     }
 }
