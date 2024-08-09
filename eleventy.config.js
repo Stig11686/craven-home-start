@@ -75,7 +75,9 @@ module.exports = config => {
     config.addPassthroughCopy('favicon.svg')
 
     return {
+        templateFormats: ['md', 'njk'],
         markdownTemplateEngine: 'njk',
+        htmlTemplateEngine : "njk",
         dir: {
             input: 'site',
             output: 'public',
