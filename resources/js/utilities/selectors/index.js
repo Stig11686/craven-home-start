@@ -27,6 +27,8 @@ const $$ = {
 
     homeHeroSlider      : document.getElementById('home-hero-slider'),
 
+    faqSection          : document.querySelector('.faq'),
+
 }
 
 export default $$

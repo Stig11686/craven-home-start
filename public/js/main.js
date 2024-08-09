@@ -12,10 +12,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @modules/mobile-nav */ "./resources/js/modules/mobile-nav/index.js");
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/slider */ "./resources/js/modules/slider/index.js");
+/* harmony import */ var _modules_faqs_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @modules/faqs-accordion */ "./resources/js/modules/faqs-accordion/index.js");
 // Import local modules
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/faqs-accordion/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/modules/faqs-accordion/index.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+var faqAccordion = function faqAccordion() {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection) return;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection.addEventListener('click', function (e) {
+    var btn = e.target.closest('.faq-btn');
+    if (!btn) return;
+    var content = btn.nextElementSibling;
+    //let angle = btn.querySelector('.svg-inline--fa');
+
+    btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
+    if (content.style.maxHeight) {
+      //angle.classList.add('fa-angle-down');
+      //angle.classList.remove('fa-angle-up');
+      content.style.maxHeight = null;
+      content.style.padding = null;
+    } else {
+      //angle.classList.remove('fa-angle-down');
+      //angle.classList.add('fa-angle-up');
+      //content.style.padding = '3rem';
+      content.style.maxHeight = "".concat(content.scrollHeight + 96, "px");
+    }
+  });
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faqAccordion);
 
 /***/ }),
 
@@ -191,7 +231,8 @@ var $$ = {
   footer: document.getElementById('footer'),
   mobileNav: document.getElementById('mobile-nav'),
   mobileNavToggle: document.getElementById('mobile-nav-toggle'),
-  homeHeroSlider: document.getElementById('home-hero-slider')
+  homeHeroSlider: document.getElementById('home-hero-slider'),
+  faqSection: document.querySelector('.faq')
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ($$);
 
