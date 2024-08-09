@@ -746,10 +746,6 @@ video {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -762,12 +758,6 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-20{
-  padding-bottom: 5rem;
-}
-.pb-24{
-  padding-bottom: 6rem;
-}
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -776,15 +766,6 @@ video {
 }
 .pt-16{
   padding-top: 4rem;
-}
-.pt-20{
-  padding-top: 5rem;
-}
-.pt-24{
-  padding-top: 6rem;
-}
-.pt-32{
-  padding-top: 8rem;
 }
 .pt-4{
   padding-top: 1rem;
@@ -2237,14 +2218,8 @@ a:not([class]):hover {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  .sm\:pb-32{
-    padding-bottom: 8rem;
-  }
   .sm\:pt-24{
     padding-top: 6rem;
-  }
-  .sm\:pt-32{
-    padding-top: 8rem;
   }
   .sm\:text-4xl{
     font-size: 2.25rem;
@@ -2333,21 +2308,17 @@ a:not([class]):hover {
   .lg\:justify-between{
     justify-content: space-between;
   }
-  .lg\:px-16{
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
   }
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-  .lg\:py-48{
-    padding-top: 12rem;
-    padding-bottom: 12rem;
   }
   .lg\:py-32{
     padding-top: 8rem;
@@ -2356,11 +2327,11 @@ a:not([class]):hover {
   .lg\:pb-12{
     padding-bottom: 3rem;
   }
-  .lg\:pt-32{
-    padding-top: 8rem;
-  }
   .lg\:pt-16{
     padding-top: 4rem;
+  }
+  .lg\:pt-32{
+    padding-top: 8rem;
   }
 }
 @media (min-width: 1280px){
@@ -2381,10 +2352,6 @@ a:not([class]):hover {
   }
   .xl\:gap-8{
     gap: 2rem;
-  }
-  .xl\:px-32{
-    padding-left: 8rem;
-    padding-right: 8rem;
   }
   .xl\:px-48{
     padding-left: 12rem;
