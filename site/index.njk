@@ -188,13 +188,13 @@ eleventyNavigation:
             </dl>
           </div>
         </div>
-        <form action="#" method="POST" class="px-6 pb-8 pt-8 lg:static lg:px-8 lg:py-32">
+        <form id="contactForm" action="/.netlify/functions/contact" method="POST" class="px-6 pb-8 pt-8 lg:static lg:px-8 lg:py-32">
           <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div class="sm:col-span-2">
                 <label for="reason" class="block text-sm font-semibold leading-6 text-gray-900">Why would you like to speak to us?</label>
                 <div class="mt-2.5">
-                  <select name="reason" id="reason" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <select required name="reason" id="reason" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     <option value="I'd like to get help">I'd like to get help</option>
                     <option value="I'd like to volunteer">I'd like to volunteer</option>
                     <option value="I'd like to discuss a fundraiser">I'd like to discuss a fundraiser</option>
@@ -206,7 +206,7 @@ eleventyNavigation:
               <div class="sm:col-span-2">
                 <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">Name</label>
                 <div class="mt-2.5">
-                  <input type="text" name="name" id="first-name" autocomplete="name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input required type="text" name="name" id="first-name" autocomplete="name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -216,20 +216,22 @@ eleventyNavigation:
                 </div>
               </div>
               <div class="sm:col-span-2">
-                <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+                <label for="phone" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
                 <div class="mt-2.5">
-                  <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input type="tel" name="phone" id="phone" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
               </div>
               <div class="sm:col-span-2">
                 <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
                 <div class="mt-2.5">
-                  <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                  <textarea required name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                 </div>
               </div>
             </div>
+            <div id="form-error" class="my-4 rounded bg-red-200 text-black hidden"></div>
+
             <div class="mt-8 flex justify-end">
-              <button type="submit" class="rounded-md bg-homestart-purple px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send message</button>
+              <button id="submit" type="submit" class="rounded-md bg-homestart-purple px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-gray-200 disabled:text-gray-300" disabled>Send message</button>
             </div>
           </div>
         </form>
@@ -240,3 +242,35 @@ eleventyNavigation:
 </main>
 
 
+<script>
+  const form = document.forms.contactForm;
+  const elements = Array.from(form.elements);
+  let message;
+  const formError = document.getElementById('form-error');
+
+  elements.forEach(element => {
+    element.addEventListener('blur', function(){
+      if((element.name === 'phone') || (element.name === 'email')) {
+        const phoneNo = form.elements.phone.value;
+        const email = form.elements.email.value;
+        const name = form.elements.name.value;
+        const reason = form.elements.reason.value;
+
+        if(!phoneNo && !email){
+          message = 'Either phone number or email is required';
+          formError.textContent = message;
+          formError.classList.replace('hidden', 'block');
+        } else {
+          formError.classList.replace('block', 'hidden');
+        }
+
+        if((phoneNo || email) && reason && name){
+            form.elements.submit.disabled = false;
+        } else {
+            form.elements.submit.disabled = true;
+        }
+        
+      } 
+    })
+  })
+</script>
