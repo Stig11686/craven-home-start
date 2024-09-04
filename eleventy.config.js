@@ -66,6 +66,7 @@ module.exports = config => {
     config.addLayoutAlias('post', 'layouts/post.njk')
     config.addLayoutAlias('contact', 'layouts/contact.njk')
     config.addLayoutAlias('category', 'layouts/category.njk')
+    config.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
 
     // Include our static assets
     config.addPassthroughCopy('css')

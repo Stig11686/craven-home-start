@@ -1,6 +1,6 @@
 {
     "name": "Home Start Craven",
-    "url": "https://skeleventy.netlify.app",
+    "url": "https://www.homestartcraven.org.uk",
     "author": {
         "name": "Steve Marks",
         "handle": ""
@@ -9,12 +9,11 @@
         "favicon": "/cropped-HSL-flavicon-32x32.png",
         "favicon_svg": "/cropped-HSL-flavicon-32x32.png",
         "apple_touch_icon": "/images/meta/apple-touch-icon.png",
-        "twitter": "",
-        "og": ""
+        "twitter": "/images/1902-hs-camden-0253.jpg",
+        "og": "/images/1902-hs-camden-0253.jpg"
     },
     "social_links": {
         "instagram": "https://www.instagram.com/homestartcraven/",
-        "twitter": "https://twitter.com/HomeCraven",
         "facebook": "https://www.facebook.com/Home-Start-Craven-602282666558168/"
     }
 }

@@ -8,13 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/b2a319195e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
 
-    {# include main.css if in development mode #}
-    {% if helpers.environment === 'development' %}
-        <link rel="stylesheet" href="/css/main.css">
-    {% else %}
-        <link rel="stylesheet" href="/css/main.min.css">
-    {% endif %}
 
     {# include javascript #}
     <script src="/js/{{ 'main.js' if helpers.environment === 'development' else 'main.min.js' }}" defer></script>

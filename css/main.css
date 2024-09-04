@@ -434,6 +434,34 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+.container{
+  width: 100%;
+}
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
 .sr-only{
   position: absolute;
   width: 1px;
@@ -520,6 +548,9 @@ video {
 .mt-8{
   margin-top: 2rem;
 }
+.mb-12{
+  margin-bottom: 3rem;
+}
 .block{
   display: block;
 }
@@ -576,6 +607,12 @@ video {
 }
 .max-w-xl{
   max-width: 36rem;
+}
+.max-w-5xl{
+  max-width: 64rem;
+}
+.max-w-full{
+  max-width: 100%;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -777,6 +814,9 @@ video {
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pt-20{
+  padding-top: 5rem;
 }
 .text-left{
   text-align: left;
@@ -2182,6 +2222,10 @@ a:not([class]):hover {
   --tw-text-opacity: 1;
   color: rgb(80 7 120 / var(--tw-text-opacity));
 }
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .focus\:ring-2:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -2269,6 +2313,9 @@ a:not([class]):hover {
   }
   .md\:mt-0{
     margin-top: 0px;
+  }
+  .md\:mb-20{
+    margin-bottom: 5rem;
   }
   .md\:flex{
     display: flex;
