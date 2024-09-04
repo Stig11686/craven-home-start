@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
     // Set up email data
     let mailOptions = {
         from: email, 
-        to: 'stevenmarks75@gmail.com',
+        to: 'homestartcravenmanager@gmail.com',
         subject: `New contact form submission from ${name}`,
         html: `
           <h2>You have a new contact form submission</h2>

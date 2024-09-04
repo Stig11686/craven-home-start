@@ -3,7 +3,7 @@ layout: page
 ---
 
 # Privacy & Cookies Policy
-Craven Home-Start is a registered Charity and a company limited by guarantee. Our services support families with children across Bromley.
+Craven Home-Start is a registered Charity and a company limited by guarantee. Our services support families with children across Craven.
 
 Craven Home-Start is committed to the protection of the rights and freedoms of individuals in accordance with the provisions of the GDPR. We ­­­­­­­­­­­­­­­­­­will comply fully with the requirements of the GDPR and will follow procedures which aim to ensure that all persons who have access to any personal data held by or on behalf of Home Start are fully aware and abide by their duties and responsibilities under the legislation.
 
