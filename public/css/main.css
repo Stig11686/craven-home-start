@@ -473,9 +473,6 @@ video {
   white-space: nowrap;
   border-width: 0;
 }
-.static{
-  position: static;
-}
 .absolute{
   position: absolute;
 }
@@ -527,6 +524,9 @@ video {
 .mb-0{
   margin-bottom: 0px;
 }
+.mb-12{
+  margin-bottom: 3rem;
+}
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -547,9 +547,6 @@ video {
 }
 .mt-8{
   margin-top: 2rem;
-}
-.mb-12{
-  margin-bottom: 3rem;
 }
 .block{
   display: block;
@@ -602,17 +599,17 @@ video {
 .max-w-3xl{
   max-width: 48rem;
 }
-.max-w-7xl{
-  max-width: 80rem;
-}
-.max-w-xl{
-  max-width: 36rem;
-}
 .max-w-5xl{
   max-width: 64rem;
 }
+.max-w-7xl{
+  max-width: 80rem;
+}
 .max-w-full{
   max-width: 100%;
+}
+.max-w-xl{
+  max-width: 36rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -809,14 +806,14 @@ video {
 .pt-16{
   padding-top: 4rem;
 }
+.pt-20{
+  padding-top: 5rem;
+}
 .pt-4{
   padding-top: 1rem;
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pt-20{
-  padding-top: 5rem;
 }
 .text-left{
   text-align: left;
@@ -2311,11 +2308,11 @@ a:not([class]):hover {
   .md\:col-span-3{
     grid-column: span 3 / span 3;
   }
-  .md\:mt-0{
-    margin-top: 0px;
-  }
   .md\:mb-20{
     margin-bottom: 5rem;
+  }
+  .md\:mt-0{
+    margin-top: 0px;
   }
   .md\:flex{
     display: flex;

@@ -1,23 +1,5 @@
-
-<ul class="social-icons box-flex">
-
-    {% for icon, link in site.social_links %}
-
-    <li class="ml-400">
-
-        <a href="{{ link | safe }}" class="icon-link box-block color-primary" target="_blank" rel="noreferrer noopener">
-
-            <span class="sr-only">Find me on {{ icon }}</span>
-
-            <svg class="icon box-block" fill="currentColor" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons/icon-library.svg#icon-{{ icon }}"></use>
-            </svg>
-
-        </a>
-
-    </li>
-
-    {% endfor %}
-
-</ul>
+<div id="social_links" class="flex justify-center xl:justify-start flex-1">
+    <div class="h-8 w-8"><a class="facebook" href="{{ site.social_links.facebook }}" target="_blank"></a></div>
+    <div class="h-8 w-8"><a class="instagram" href="{{ site.social_links.instagram }}" target="_blank"></a></div>
+</div>
 
